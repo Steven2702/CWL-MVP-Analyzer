@@ -1,0 +1,65 @@
+/* ===== TABLET DEVICES (768px - 1024px) ===== */
+@media (max-width: 1024px) {
+    .container {
+        padding: 0 15px;
+    }
+
+    .navbar-brand h1 {
+        font-size: 2rem;
+    }
+
+    .search-card {
+        padding: 30px;
+    }
+
+    .ranking-container {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    }
+
+    .stat-card .value {
+        font-size: 1.5rem;
+    }
+}
+
+/* ===== MOBILE DEVICES (480px - 768px) ===== */
+@media (max-width: 768px) {
+    .navbar-brand h1 {
+        font-size: 1.5rem;
+    }
+
+    .search-card {
+        padding: 20px;
+    }
+
+    .search-form {
+        flex-direction: column;
+    }
+
+    .btn {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .ranking-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ===== SMALL MOBILE (< 480px) ===== */
+@media (max-width: 480px) {
+    .navbar-brand h1 {
+        font-size: 1.2rem;
+    }
+
+    .search-card {
+        padding: 15px;
+    }
+
+    .stat-card .value {
+        font-size: 1.1rem;
+    }
+
+    .modal-content {
+        padding: 20px;
+    }
+}

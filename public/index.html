@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CWL MVP Analyzer - Clash of Clans</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-brand">
+                <h1>🏆 CWL MVP Analyzer</h1>
+                <p class="tagline">Análisis inteligente de desempeño en Liga de Guerras</p>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Container -->
+    <div class="container">
+        <!-- Search Section -->
+        <section class="search-section">
+            <div class="search-card">
+                <h2>Analizar Liga de Guerras</h2>
+                <p>Introduce el tag de tu clan para obtener un análisis completo</p>
+                
+                <div class="search-form">
+                    <input 
+                        type="text" 
+                        id="clanTagInput" 
+                        placeholder="Ej: #2VCVGLJ"
+                        class="input-field"
+                    >
+                    <button id="analyzeBtn" class="btn btn-primary">
+                        <span>Analizar</span>
+                        <span class="loader hidden" id="loader"></span>
+                    </button>
+                </div>
+                
+                <div id="errorMessage" class="error-message hidden"></div>
+            </div>
+        </section>
+
+        <!-- Loading Section -->
+        <div id="loadingSection" class="loading-section hidden">
+            <div class="spinner"></div>
+            <p>Analizando liga de guerras...</p>
+        </div>
+
+        <!-- Results Section -->
+        <div id="resultsSection" class="results-section hidden">
+            
+            <!-- Summary Stats -->
+            <section class="summary-stats" id="summaryStats"></section>
+
+            <!-- MVP Recommendation -->
+            <section class="mvp-recommendation" id="mvpRecommendation"></section>
+
+            <!-- Rankings -->
+            <section class="rankings-section">
+                <h2>🥇 Ranking MVP</h2>
+                <div class="ranking-container" id="rankingContainer"></div>
+            </section>
+
+            <!-- Player Details Modal -->
+            <div id="playerModal" class="modal hidden">
+                <div class="modal-content">
+                    <span class="close-btn">&times;</span>
+                    <div id="playerDetails"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>CWL MVP Analyzer • Powered by Clash of Clans API</p>
+        <p class="disclaimer">Esta aplicación no está afiliada a Supercell</p>
+    </footer>
+
+    <script src="js/app.js"></script>
+    <script src="js/api-client.js"></script>
+    <script src="js/utils.js"></script>
+</body>
+</html>
